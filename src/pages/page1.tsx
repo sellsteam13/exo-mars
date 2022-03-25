@@ -106,7 +106,7 @@ const FirstPage = () => {
                             </p>
                         </div>
                     </div>
-                    <blockquote className={styles.blockquote}>
+                    <blockquote className={cx('blockquote', styles.blockquote)}>
                         <p>
                             Все это значит, что действительно важные вопросы
                             исследования Марса очень трудно разрешимы с

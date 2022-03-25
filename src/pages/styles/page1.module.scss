@@ -14,24 +14,5 @@
 }
 
 .blockquote {
-    padding: 110px 0;
     margin: 80px 0 120px;
-    position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -120px;
-        transform: translateY(-50%);
-        width: 596px;
-        height: 343px;
-        background: url("data:image/svg+xml,%3Csvg width='596' height='343' viewBox='0 0 596 343' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.5' cx='171' cy='171.892' r='170' stroke='white' stroke-width='2' stroke-dasharray='2 8'/%3E%3Ccircle opacity='0.5' cx='285' cy='172' r='170' stroke='white' stroke-width='2' stroke-dasharray='2 8'/%3E%3Ccircle opacity='0.5' cx='425' cy='171.892' r='170' stroke='white' stroke-width='2' stroke-dasharray='2 8'/%3E%3C/svg%3E%0A")
-            center center / 100% auto no-repeat;
-    }
-    + * {
-        margin-top: 0;
-    }
-    p {
-        text-indent: 112px;
-    }
 }

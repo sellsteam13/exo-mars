@@ -2,3 +2,36 @@
 @import "~/styles/functions";
 
 // Fifth page styles.
+.page {
+    padding-bottom: 1426px;
+    position: relative;
+    background: url("../../images/content/fifth-page/bg.png") center -72px / 1920px
+        auto no-repeat;
+    &-illstr {
+        position: absolute;
+        pointer-events: none;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1920px;
+    }
+    &-molecule {
+        position: relative;
+        width: 100%;
+        height: 370px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -123px;
+            width: 370px;
+            height: 370px;
+            background: url("../../images/content/fifth-page/molecule.png")
+                center center / 100% 100% no-repeat;
+        }
+    }
+}
+
+.blockquote {
+    margin: 70px 0 80px;
+}

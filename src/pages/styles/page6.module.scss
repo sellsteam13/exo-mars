@@ -2,3 +2,23 @@
 @import "~/styles/functions";
 
 // Sixth page styles.
+.page {
+    background: url('../../images/content/sixth-page/top-bg.svg') left -72px / 1920px auto no-repeat, url('../../images/content/sixth-page/space-bg.png') center 3010px / 1920px auto no-repeat;
+    &-second-title {
+        margin: 120px 0 0;
+        position: relative;
+        span {
+            position: relative;
+            z-index: 1;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: -658px;
+            top: -752px;
+            width: 1059px;
+            height: 1067px;
+            background: url('../../images/content/sixth-page/circles.png') center center / 100% 100% no-repeat;
+        }
+    }
+}

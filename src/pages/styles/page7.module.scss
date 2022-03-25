@@ -2,3 +2,28 @@
 @import "~/styles/functions";
 
 // Seventh page styles.
+.page {
+    background: url("../../images/content/seventh-page/top1-bg.svg") right -72px /
+            1266px auto no-repeat,
+        url("../../images/content/seventh-page/top2-bg.svg") left 872px / 678px
+            auto no-repeat,
+        url("../../images/content/seventh-page/mid-bg.png") center 1367px /
+            1920px auto no-repeat;
+    &-circles {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 582px;
+            height: 500px;
+            top: -150px;
+            right: -320px;
+            background: url("../../images/content/seventh-page/circles.png")
+                center center / 100% 100% no-repeat;
+        }
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

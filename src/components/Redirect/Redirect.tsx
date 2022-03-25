@@ -24,10 +24,11 @@ export const Redirect = ({ ...rest }) => {
             start: "bottom bottom",
             pin: true,
             end: '+=500px',
+            // scrub: 1,
             onUpdate: (self) => {
-                let tmpProgress = self.progress * 100;
+                let tmpProgress = (self.progress * 100) + 10;
                 setProgress(tmpProgress + "%");
-                if (tmpProgress > 99 && canRedirect) {
+                if (tmpProgress > 105 && canRedirect) {
                     navigate(rest.to)
                 }
             },

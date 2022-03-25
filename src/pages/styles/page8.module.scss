@@ -2,3 +2,25 @@
 @import "~/styles/functions";
 
 // Eighth page styles.
+.page {
+    background: url('../../images/content/eighth-page/bg.png') center 32px / 1920px auto no-repeat;
+    &-grid {
+        margin: 120px 0 320px;
+        position: relative;
+        &-aside {
+            grid-column: 1/-1;
+        }
+    }
+    &-year {
+        margin: 0 0 40px -120px;
+        grid-column: 1/-1;
+        max-width: 794px;
+    }
+    &-illstr {
+        position: absolute;
+        top: 225px;
+        right: -120px;
+        max-width: 760px;
+        pointer-events: none;
+    }
+}
