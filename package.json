@@ -1,0 +1,44 @@
+{
+  "name": "fantasy-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fantasy World landing page",
+  "author": "Royal Design",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "postinstall": "husky install",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.5.5",
+    "classnames": "2.3.1",
+    "gatsby": "4.5.2",
+    "gatsby-plugin-image": "^2.7.0",
+    "gatsby-plugin-manifest": "4.5.1",
+    "gatsby-plugin-sass": "5.5.0",
+    "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-plugin-sitemap": "5.5.0",
+    "gatsby-plugin-transition-link": "^1.20.5",
+    "gatsby-source-filesystem": "^4.7.0",
+    "gatsby-transformer-sharp": "^4.7.0",
+    "gsap": "^3.9.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "1.48.0",
+    "swiper": "^8.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "gatsby-plugin-root-import": "^2.0.8",
+    "husky": "^7.0.0",
+    "node-sass": "7.0.1",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.3"
+  }
+}

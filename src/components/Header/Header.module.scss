@@ -1,0 +1,56 @@
+@import "~/styles/variables";
+@import "~/styles/functions";
+// Header styles.
+.header {
+    background: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 16px 32px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    &-socials {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        &-link {
+            svg {
+                width: 24px;
+                height: 25px;
+                fill: $white;
+            }
+            + * {
+                margin-left: 16px;
+            }
+            &-vk:hover svg {
+                fill: #5e7fb8;
+            }
+            &-tg:hover svg {
+                fill: #5085c1;
+            }
+            &-twitter:hover svg {
+                fill: #639ee6;
+            }
+            &-fb:hover svg {
+                fill: #475890;
+            }
+        }
+    }
+    &-burger {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 32px;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 8.39172H0V6.89172H24V8.39172ZM24 20.3917H0V18.8917H24V20.3917ZM24 14.3797H0V12.8917H24V14.3797Z' fill='white'/%3E%3C/svg%3E%0A")
+            center center / 24px auto no-repeat;
+        transition: background $trans, transform 0.7s ease;
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '~/styles/variables';
+@import '~/styles/functions';
+// Footer styles.
+.footer {
+    background: url("data:image/svg+xml,%3Csvg width='10' height='2' viewBox='0 0 10 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='2' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E%0A") left top / 10px auto repeat-x;
+    padding: 30px 32px 28px;
+    display: flex;
+    align-items: center;
+    p {
+        text-indent: 0;
+    }
+    &-logo {
+        max-width: 200px;
+        margin-right: 32px;
+    }
+    &-text {
+        color: $lgrey;
+        padding-right: 32px;
+    }
+    &-studio {
+        margin-left: auto;
+        color: $grey;
+        &-link {
+            color: $white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

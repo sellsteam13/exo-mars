@@ -1,0 +1,241 @@
+@import "./normalize";
+@import "./variables";
+@import "./functions";
+
+// Global styles
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    word-break: break-word;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    text-overflow: ellipsis;
+    word-break: normal;
+}
+
+svg {
+    transition: $trans;
+    transition-property: fill, stroke;
+}
+
+html,
+body {
+    font: 10px/1.2 $pFont;
+    color: $white;
+    background: $black;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+a[href],
+area[href],
+button:not([disabled]),
+a:not([disabled]),
+iframe,
+[tabindex] {
+    &:not([tabindex="-1"]) {
+        outline-offset: 2px;
+        outline-color: #71a8e4;
+    }
+}
+
+// Layout styles
+.limiter {
+    max-width: calc(100% - 128px);
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.content {
+    border-top: 2px solid #333;
+    padding: 78px 0 120px;
+}
+
+// Text styles
+h1,
+.heading1,
+h2,
+.heading2,
+h3,
+.heading3,
+h4,
+.heading4,
+h5,
+.heading5 {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $white;
+    b {
+        font-weight: inherit;
+    }
+}
+
+h1,
+.heading1 {
+    font-size: rem(72);
+    line-height: 122%;
+}
+
+h2,
+.heading2 {
+    font-size: rem(48);
+    line-height: 133%;
+}
+
+h3,
+.heading3 {
+    font-size: rem(28);
+    line-height: 143%;
+}
+
+p,
+.p {
+    margin: 0;
+    font-size: rem(26);
+    line-height: 155%;
+    color: $white;
+    &.p--light {
+        font-weight: 300;
+        font-size: rem(20);
+        line-height: 180%;
+    }
+    &.p--label {
+        font-weight: 300;
+        font-size: rem(20);
+        line-height: 160%;
+    }
+}
+
+// Button reset
+.btn {
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    text-align: left;
+    background: none;
+    cursor: pointer;
+    &.centered {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 72px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+// Fixes
+.tl-edges {
+    overflow-y: hidden;
+}
+
+b {
+    font-weight: 700;
+}
+
+// default heading
+.heading {
+    margin-bottom: 120px;
+    &-top {
+        margin-bottom: 50px;
+        color: $lgrey;
+        span {
+            float: right;
+        }
+    }
+    &__title {
+        span {
+            display: block;
+            color: $grey;
+        }
+    }
+}
+
+// default grid
+.grid {
+    display: grid;
+    grid-template-columns: 250px calc(100% - 360px);
+    gap: 110px;
+    &-aside {
+        &-item {
+            +* {
+                margin-top: 80px;
+            }
+            &__count {
+                background: $gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+            &__label {
+                font-style: italic;
+                margin: 0 0 16px;
+            }
+            &__text {
+                color: $lgrey;
+                font-style: italic;
+            }
+        }
+    }
+    &-content {
+        p {
+            text-indent: 112px;
+            &.p--light {
+                color: $lgrey;
+            }
+            + p {
+                margin-top: 80px;
+            }
+        }
+    }
+}
+
+// default picture
+.picture {
+    margin: 120px -115px;
+    &__title {
+        margin-top: 32px;
+        padding-left: 62px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            top: 2px;
+            left: 0;
+            border-radius: 50%;
+            background: linear-gradient(225deg, #D06B22 25%, rgba(208, 44, 34, 0) 75%);
+        }
+    }
+}

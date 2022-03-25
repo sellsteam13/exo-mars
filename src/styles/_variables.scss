@@ -1,0 +1,25 @@
+/** css vars **/
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-grey: #666666;
+    --color-light-grey: #cccccc;
+    --color-gradient: linear-gradient(81.61deg, #f0fb73 0%, #ff2828 100%);
+    --primary-font: "Inter", sans-serif;
+    --default-transition-speed: 0.15s;
+    --default-transition-timing-function: ease;
+}
+
+/** scss vars **/
+
+// --colors
+$black: var(--color-black);
+$white: var(--color-white);
+$grey: var(--color-grey);
+$lgrey: var(--color-light-grey);
+$gradient: var(--color-gradient);
+// --others
+$pFont: var(--primary-font);
+$trans: var(--default-transition-speed)
+    var(--default-transition-timing-function);
