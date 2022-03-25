@@ -12,7 +12,6 @@ import "~/styles/global.scss";
 
 // Components and sections
 import { Header } from "~/components/Header/Header";
-import { Footer } from "~/components/Footer/Footer";
 
 // Index
 export default function Layout({ children }) {
@@ -25,9 +24,6 @@ export default function Layout({ children }) {
             <main className="main">
                 {children}
             </main>
-
-            {/* Footer */}
-            {/* <Footer /> */}
         </div>
     );
 };

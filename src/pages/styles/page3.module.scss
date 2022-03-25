@@ -1,0 +1,28 @@
+@import "~/styles/variables";
+@import "~/styles/functions";
+
+// Third page styles.
+.page {
+    background: url('../../images/content/third-page/top-bg.png') top right / 1920px auto no-repeat, url('../../images/content/third-page/space-bg.png') left 947px / 1512px auto no-repeat, url('../../images/content/third-page/bottom-bg.png') left calc(100% - 488px) / 1441px auto no-repeat;
+    &-subtitle {
+        margin: 1096px 0 0;
+        grid-column: 1/-1;
+    }
+    &-illstr {
+        position: absolute !important;
+        z-index: 0 !important;
+        top: -171px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1920px;
+    }
+}
+
+.grid-illstr {
+    margin: 220px 0 120px;
+    position: relative;
+    >* {
+        position: relative;
+        z-index: 1;
+    }
+}

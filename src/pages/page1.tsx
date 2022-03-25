@@ -4,10 +4,27 @@ import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./styles/page1.module.scss";
 
 import { Redirect } from "~/components/Redirect/Redirect.tsx";
+import { Helmet } from "react-helmet";
+
 // FirstPage
 const FirstPage = () => {
     return (
-        <>
+        <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>
+                    Как ответить на вопрос - Есть ли жизнь на Красной планете?
+                </title>
+                <meta
+                    name="description"
+                    content="
+                        В Солнечной системе есть зона обитаемости (зона,
+                        где на поверхности может быть жидкая вода) — и
+                        кроме Земли, туда, как ни странно, входит и
+                        Марс. Если бы последний был размером с нашу...
+                    "
+                />
+            </Helmet>
             <section className={cx("content", styles.page)}>
                 <div className="content-wrapper limiter">
                     <div className="heading">
@@ -135,12 +152,12 @@ const FirstPage = () => {
                 </div>
             </section>
             <Redirect
-                to='/page2'
-                count='02'
-                title='Советский подход:'
-                text='первые успехи, первые неудачи'
+                to="/page2"
+                count="02"
+                title="Советский подход:"
+                text="первые успехи, первые неудачи"
             />
-        </>
+        </div>
     );
 };
 

@@ -1,5 +1,80 @@
 @import "~/styles/variables";
 @import "~/styles/functions";
 
-// First page styles.
-.text {}
+// Second page styles.
+.page {
+    background: url("../../images/content/second-page/bg.png") center -90px / 3550px
+        auto no-repeat;
+}
+.grid {
+    &-illustration {
+        position: absolute;
+        pointer-events: none;
+        &-1 {
+            max-width: 730px;
+            right: -276px;
+            top: 150px;
+        }
+        &-2 {
+            max-width: 606px;
+            right: 69px;
+            top: 100px;
+        }
+        &-3 {
+            max-width: 528px;
+            right: 6px;
+            top: 80px;
+        }
+        &-4 {
+            max-width: 604px;
+            right: -248px;
+            top: -460px;
+        }
+        &-5 {
+            max-width: 599px;
+            right: 133px;
+            top: -402px;
+        }
+    }
+    &-second,
+    &-third,
+    &-fourth,
+    &-fifth,
+    &-first {
+        position: relative;
+    }
+    &-first {
+        grid-template-columns: 100%;
+        .content-first {
+            margin-top: 145px;
+            padding-left: 360px;
+        }
+    }
+    &-first,
+    &-second {
+        margin-bottom: 160px;
+    }
+    &-third {
+        margin-bottom: 620px;
+    }
+    &-fourth {
+        margin-bottom: 560px;
+    }
+    &-count {
+        grid-column: 1/-1;
+        margin-left: -120px;
+        margin-right: -210px;
+        margin-bottom: 40px;
+    }
+}
+
+.content {
+    &-second,
+    &-third {
+        padding-top: 288px;
+    }
+    &-fourth,
+    &-fifth {
+        padding-top: 104px;
+    }
+}

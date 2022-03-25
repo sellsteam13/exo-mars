@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import { Link } from "gatsby";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { StaticImage } from "gatsby-plugin-image";
 import { useScrollBlock } from "~/hooks/useScrollBlock";
 
@@ -21,15 +20,15 @@ export const Header = () => {
     }
 
     return (
-        <>
+        <div>
             <header className={styles.header}>
-                <AniLink fade to="/" className={styles.headerLogo}>
+                <Link to="/" className={styles.headerLogo}>
                     <StaticImage
                         placeholder={"none"}
                         src={"../../images/nakedScience-logo.png"}
                         alt={"Naked Science Logotype"}
                     />
-                </AniLink>
+                </Link>
                 <button
                     onClick={toggleMenu}
                     aria-label={"Menu"}
@@ -103,6 +102,6 @@ export const Header = () => {
                     </Link>
                 </div>
             </header>
-        </>
+        </div>
     );
 };

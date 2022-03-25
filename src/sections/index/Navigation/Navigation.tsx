@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
+// import Link from "gatsby-plugin-transition-link/Link";
 
 import * as styles from "./styles.module.scss";
 
@@ -17,9 +18,7 @@ import illstr8 from "~/images/content/nav-illstr/item8.png";
 export const Navigation = () => {
     return (
         <section className={styles.nav}>
-            <AniLink
-                paintDrip
-                color="black"
+            <Link
                 to="/page1"
                 className={styles.navLink}
             >
@@ -42,10 +41,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page2"
                 className={styles.navLink}
             >
@@ -66,10 +63,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page3"
                 className={styles.navLink}
             >
@@ -93,10 +88,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page4"
                 className={styles.navLink}
             >
@@ -117,10 +110,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page5"
                 className={styles.navLink}
             >
@@ -141,10 +132,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page6"
                 className={styles.navLink}
             >
@@ -165,10 +154,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page7"
                 className={styles.navLink}
             >
@@ -189,10 +176,8 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
-            <AniLink
-                paintDrip
-                color="black"
+            </Link>
+            <Link
                 to="/page8"
                 className={styles.navLink}
             >
@@ -215,7 +200,7 @@ export const Navigation = () => {
                         alt={"Illustration 1"}
                     />
                 </span>
-            </AniLink>
+            </Link>
         </section>
     );
 };

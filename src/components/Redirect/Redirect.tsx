@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { navigate } from "gatsby"
+import { Link } from "gatsby";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import cx from "classnames";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { Footer } from "~/components/Footer/Footer"
 
 import * as styles from "./Redirect.module.scss";
@@ -34,10 +34,13 @@ export const Redirect = ({ ...rest }) => {
         });
 
         const updateTrigger = () => {
+            
             if (!canRedirect) {
-                setCanRedirect(true)
-                ScrollTrigger.refresh()
-                ScrollTrigger.update()
+                setTimeout(() => {
+                    setCanRedirect(true)
+                    ScrollTrigger.refresh()
+                    ScrollTrigger.update()
+                }, 100)
             }
         }
 
@@ -51,16 +54,14 @@ export const Redirect = ({ ...rest }) => {
 
     return (
         <div className={styles.redirect} ref={boxRef}>
-            <AniLink
-                paintDrip
-                color="black"
+            <Link
                 to={rest.to}
                 className={styles.redirectLink}
             >
-                <div
+                <span
                     className={styles.redirectLinkProgress}
                     style={{ width: progress }}
-                ></div>
+                ></span>
                 <span className={styles.redirectLinkWrapper}>
                     <span className={cx("p", styles.redirectLinkCount)}>
                         <b>{rest.count}</b>
@@ -70,7 +71,7 @@ export const Redirect = ({ ...rest }) => {
                         {rest.text}
                     </span>
                 </span>
-            </AniLink>
+            </Link>
             <Footer/>
         </div>
     );
