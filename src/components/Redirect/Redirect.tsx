@@ -15,6 +15,7 @@ export const Redirect = ({ ...rest }) => {
     gsap.registerPlugin(ScrollTrigger);
     const boxRef = useRef<HTMLDivElement>();
     const [progress, setProgress] = useState("0%");
+    const [canRedirect, setCanRedirect] = useState(false);
 
 
     useEffect(() => {
@@ -26,16 +27,17 @@ export const Redirect = ({ ...rest }) => {
             onUpdate: (self) => {
                 let tmpProgress = self.progress * 100;
                 setProgress(tmpProgress + "%");
-                if (tmpProgress > 99) {
+                if (tmpProgress > 99 && canRedirect) {
                     navigate(rest.to)
                 }
             },
         });
 
         const updateTrigger = () => {
-            if (window.pageYOffset < 100) {
-                ST.update()
-                console.log(1)
+            if (!canRedirect) {
+                setCanRedirect(true)
+                ScrollTrigger.refresh()
+                ScrollTrigger.update()
             }
         }
 
@@ -45,7 +47,7 @@ export const Redirect = ({ ...rest }) => {
             window.removeEventListener('scroll', updateTrigger)
             ST.kill(false)
         }
-    }, []);
+    }, [canRedirect]);
 
     return (
         <div className={styles.redirect} ref={boxRef}>
