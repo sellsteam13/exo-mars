@@ -13,6 +13,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
+        resolve: `gatsby-plugin-nprogress`,
+        options: {
+          color: `tomato`,
+          showSpinner: false,
+        },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         '~': path.join(__dirname, 'src'),
