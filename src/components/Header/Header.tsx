@@ -5,6 +5,17 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useScrollBlock } from "~/hooks/useScrollBlock";
 
 import * as styles from "./Header.module.scss";
+import { Footer } from "~/components/Footer/Footer";
+
+// Illustrations
+import illstr1 from "~/images/content/nav-illstr/item1.png";
+import illstr2 from "~/images/content/nav-illstr/item2.png";
+import illstr3 from "~/images/content/nav-illstr/item3.png";
+import illstr4 from "~/images/content/nav-illstr/item4.png";
+import illstr5 from "~/images/content/nav-illstr/item5.png";
+import illstr6 from "~/images/content/nav-illstr/item6.png";
+import illstr7 from "~/images/content/nav-illstr/item7.png";
+import illstr8 from "~/images/content/nav-illstr/item8.png";
 
 export const Header = () => {
     const [menuState, setMenuState] = React.useState(false);
@@ -33,7 +44,7 @@ export const Header = () => {
                     onClick={toggleMenu}
                     aria-label={"Menu"}
                     title={"Menu"}
-                    className={cx("btn", styles.headerBurger)}
+                    className={cx("btn", styles.headerBurger, menuState ? styles.headerBurgerActive : '')}
                 ></button>
                 <div className={styles.headerSocials}>
                     <Link
@@ -102,6 +113,191 @@ export const Header = () => {
                     </Link>
                 </div>
             </header>
+            <div className={cx(styles.menu, menuState ? styles.menuVisible : '')}>
+                <div className={styles.menuWrapper}>
+                    <Link onClick={toggleMenu} to="/page1" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>01</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"Как ответить на вопрос – "}>
+                                    Как ответить на вопрос –
+                                </b>
+                                Есть ли жизнь на Красной планете?
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr1
+                                )}
+                                src={illstr1}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page2" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>02</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"Советский подход: "}>
+                                    Советский подход:
+                                </b>
+                                первые успехи, первые неудачи
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr2
+                                )}
+                                src={illstr2}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page3" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>03</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"на борту марсохода:"}>
+                                    на борту марсохода:
+                                </b>
+                                Как нейтронный детектор нашел воду <br /> у поверхности
+                                Марса
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr3
+                                )}
+                                src={illstr3}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page4" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>04</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"Exomars – "}>Exomars – </b>
+                                этапы экспедиции
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr4
+                                )}
+                                src={illstr4}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page5" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>05</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"Первый ExoMars:"}>
+                                    Первый ExoMars:
+                                </b>
+                                хлороводород и другие газы
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr5
+                                )}
+                                src={illstr5}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page6" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>06</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"ExoMars-2022"}>ExoMars-2022</b>—
+                                миссия, сочетающая и посадочную <br /> платформу, и
+                                марсоход
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr6
+                                )}
+                                src={illstr6}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page7" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>07</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"«Казачок»:"}>«Казачок»:</b>
+                                хорошо подготовленный наблюдатель
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr7
+                                )}
+                                src={illstr7}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Link onClick={toggleMenu} to="/page8" className={styles.menuLink}>
+                        <span className={styles.menuLinkWrapper}>
+                            <span className={cx("p p--label", styles.menuLinkCount)}>
+                                <b>08</b>
+                            </span>
+                            <span
+                                className={cx("heading3", styles.menuLinkText)}
+                            >
+                                <b data-alt={"«Розалинд Франклин»:"}>
+                                    «Розалинд Франклин»:
+                                </b>
+                                добуриться до жизни
+                            </span>
+                            <img
+                                className={cx(
+                                    styles.menuLinkIllstr,
+                                    styles.menuLinkIllstr8
+                                )}
+                                src={illstr8}
+                                alt={"Illustration 1"}
+                            />
+                        </span>
+                    </Link>
+                    <Footer />
+                </div>
+            </div>
         </div>
     );
 };
