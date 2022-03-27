@@ -57,7 +57,7 @@ iframe,
 
 // Layout styles
 .wrapper {
-    overflow: hidden;
+    overflow-x: clip;
 }
 
 .limiter {

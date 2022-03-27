@@ -2,3 +2,184 @@
 @import "~/styles/functions";
 
 // Fourth page styles.
+.page {
+    position: relative;
+    margin-top: -50vh;
+    .heading {
+        position: relative;
+        z-index: 2;
+        transform: translateY(50vh);
+    }
+    &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        pointer-events: none;
+        background: url('../../images/content/fourth-page/top-bg.png') left -72px / 937px auto no-repeat;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(50vh + 18px);
+        left: 184px;
+        width: 444px;
+        height: 440px;
+        background: url('../../images/content/fourth-page/svg-bg.svg') center center / 100% 100% no-repeat;
+    }
+}
+.scroller {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        padding: 54px 0 0 0;
+        min-width: 3560px;
+        background: url('../../images/content/fourth-page//inside-left.png') left bottom / auto 100% no-repeat, url('../../images/content/fourth-page/inside-right.png') right top / auto 100% no-repeat;
+    }
+    &-text {
+        max-height: 349px;
+        margin-left: 0;
+        flex-shrink: 0;
+        img {
+            margin-right: 200px;
+            min-width: 3361px;
+            min-height: 349px;
+            max-height: 350px;
+        }
+    }
+    &-illstr {
+        position: absolute;
+        top: 200px;
+        left: 175px;
+        bottom: 0;
+        display: flex;
+        right: 0;
+        img {
+            flex-shrink: 0;
+            height: 100%;
+            width: auto;
+            max-height: 842px;
+            max-width: 2003px;
+        }
+    }
+}
+
+.blockquote {
+    margin: 80px 0;
+    span {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+.animation {
+    height: 500vh;
+    position: relative;
+    // margin-top: -50vh;
+    &-fixed-texts {
+        position: absolute;
+        z-index: 2;
+        top: 50vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &-wrapper {
+        height: 100vh;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        margin-bottom: 20vh;
+    }
+    &-texts {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -60px -93px;
+        position: relative;
+        z-index: 1;
+        >* {
+            margin: 0 60px 93px;
+            &:nth-child(1), &:nth-child(2) {
+                max-width: 240px;
+            }
+            &:nth-child(3), &:nth-child(4) {
+                max-width: 328px;
+            }
+        }
+    }
+    &-sequence {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            will-change: background;
+            image-rendering: optimizeSpeed;
+            /* Older versions of FF          */
+            image-rendering: -moz-crisp-edges;
+            /* FF 6.0+                       */
+            image-rendering: -webkit-optimize-contrast;
+            /* Safari                        */
+            image-rendering: -o-crisp-edges;
+            /* OS X & Windows Opera (12.02+) */
+            image-rendering: pixelated;
+            /* Awesome future-browsers       */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE                            */
+        }
+    }
+}
+
+.items {
+    display: flex;
+    align-items: flex-start;
+    margin-top: -300px;
+    &-block {
+        position: relative;
+        &-illstr1, &-illstr2 {
+            position: absolute;
+            pointer-events: none;
+            max-width: 590px;
+            bottom: 0;
+        }
+        &-illstr1 {
+            margin-left: -87px;
+        }
+        &-illstr2 {
+            left: 0;
+        }
+        &-title {
+            margin-bottom: 24px;
+            svg {
+                vertical-align: middle;
+                margin-right: 12px;
+            }
+        }
+        &-descr {
+            color: $lgrey;
+        }
+        &:first-child {
+            max-width: 350px;
+            margin: 265px 250px 0 0;
+            padding-bottom: 300px;
+        }
+        &:nth-child(2) {
+            padding-bottom: 372px;
+            max-width: 472px;
+        }
+    }
+}

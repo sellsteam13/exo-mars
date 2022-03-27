@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
-import { navigate } from "gatsby"
-import { Link } from "gatsby";
+import { navigate, Link } from "gatsby"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
