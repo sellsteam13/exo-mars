@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import cx from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./styles/page4.module.scss";
@@ -8,8 +8,8 @@ import { Helmet } from "react-helmet";
 
 import textImg from "~/images/content/fourth-page/text.png";
 import illstrImg from "~/images/content/fourth-page/Illstr.png";
-import item1 from '../images/content/fourth-page/item1.png';
-import item2 from '../images/content/fourth-page/item2.png';
+import item1 from '~/images/content/fourth-page/item1.png';
+import item2 from '~/images/content/fourth-page/item2.png';
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
@@ -50,7 +50,7 @@ const FourthPage = () => {
         let beginScene = {frame: 1}
 
         // Horizontal scrolling
-        gsap.to(scrollerRef.current, {
+        const anim1 = gsap.to(scrollerRef.current, {
             x: () => -(scrollerRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
             ease: "none",
             scrollTrigger: {
@@ -64,7 +64,7 @@ const FourthPage = () => {
         });
 
         // Sequence animation
-        gsap.to(scene, {
+        const anim2 = gsap.to(scene, {
             frame: 216,
             snap: 'frame',
             onUpdate: render,
@@ -78,7 +78,7 @@ const FourthPage = () => {
         });
 
         // On-load animation
-        gsap.to(beginScene, {
+        const anim3 = gsap.to(beginScene, {
             frame: 60,
             snap: 'frame',
             onUpdate: renderFirst,
@@ -108,6 +108,13 @@ const FourthPage = () => {
             animationRef.current.style.background = `url(${image.src}) no-repeat center / cover`
         }
 
+        return () => {
+
+            anim1.kill()
+            anim2.kill()
+            anim3.kill()
+
+        }
     }, []);
 
     return (
