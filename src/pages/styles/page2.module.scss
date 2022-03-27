@@ -5,6 +5,10 @@
 .page {
     background: url("../../images/content/second-page/bg.png") center -90px / 3550px
         auto no-repeat;
+        @media (max-width: 992px) {
+            background-size: 1920px auto;
+            background-position-x: calc(50% - 170px);
+        }
 }
 .grid {
     &-illustration {
@@ -14,26 +18,54 @@
             max-width: 730px;
             right: -276px;
             top: 150px;
+            @media (max-width: 992px) {
+                max-width: 343px;
+                right: -69px;
+                top: 184px;
+            }
         }
         &-2 {
             max-width: 606px;
             right: 69px;
             top: 100px;
+            @media (max-width: 992px) {
+                max-width: 430px;
+                top: 144px;
+                right: -141px;
+                transform: rotate(-41deg);
+            }
         }
         &-3 {
             max-width: 528px;
             right: 6px;
             top: 80px;
+            @media (max-width: 992px) {
+                max-width: 308px;
+                top: 166px;
+                right: -42px;
+                transform: rotate(-7deg);
+            }
         }
         &-4 {
             max-width: 604px;
             right: -248px;
             top: -460px;
+            @media (max-width: 992px) {
+                top: 95px;
+                right: -100px;
+                max-width: 389px;
+                transform: rotate(15deg);
+            }
         }
         &-5 {
             max-width: 599px;
             right: 133px;
             top: -402px;
+            @media (max-width: 992px) {
+                max-width: 373px;
+                top: 125px;
+                right: -77px;
+            }
         }
     }
     &-second,
@@ -48,23 +80,49 @@
         .content-first {
             margin-top: 145px;
             padding-left: 360px;
+            @media (max-width: 992px) {
+                padding: 0;
+                margin-top: 187px;
+            }
         }
     }
     &-first,
     &-second {
         margin-bottom: 160px;
+        @media (max-width: 992px) {
+            margin-bottom: 40px;
+        }
     }
     &-third {
         margin-bottom: 620px;
+        @media (max-width: 992px) {
+            margin-bottom: 40px;
+        }
     }
     &-fourth {
         margin-bottom: 560px;
+        @media (max-width: 992px) {
+            margin-bottom: 80px;
+        }
     }
     &-count {
         grid-column: 1/-1;
         margin-left: -120px;
         margin-right: -210px;
         margin-bottom: 40px;
+        @media (max-width: 992px) {
+            margin-left: -5px;
+            margin-bottom: 0;
+            margin-bottom: -30px;
+            max-height: 126px;
+            &-large img {
+                max-height: 82px !important;
+            }
+            img {
+                width: unset !important;
+                max-height: 126px;
+            }
+        }
     }
 }
 
@@ -72,9 +130,20 @@
     &-second,
     &-third {
         padding-top: 288px;
+        @media (max-width: 992px) {
+            padding-top: 237px;
+        }
     }
     &-fourth,
     &-fifth {
         padding-top: 104px;
+        @media (max-width: 992px) {
+            padding-top: 237px;
+        }
+    }
+    &-fifth {
+        @media (max-width: 992px) {
+            padding-top: 277px;
+        }
     }
 }

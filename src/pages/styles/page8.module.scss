@@ -4,9 +4,16 @@
 // Eighth page styles.
 .page {
     background: url('../../images/content/eighth-page/bg.png') center 32px / 1920px auto no-repeat;
+    @media (max-width: 992px) {
+        background-size: 600px auto;
+        background-position: center -24px;
+    }
     &-grid {
         margin: 120px 0 320px;
         position: relative;
+        @media (max-width: 992px) {
+            margin: 40px 0 320px;
+        }
         &-aside {
             grid-column: 1/-1;
         }
@@ -15,6 +22,16 @@
         margin: 0 0 40px -120px;
         grid-column: 1/-1;
         max-width: 794px;
+        @media (max-width: 992px) {
+            max-height: 90px;
+            margin: 0 0 -30px;
+            img {
+                height: 90px !important;
+                object-fit: unset !important;
+                width: unset !important;
+                max-height: 90px;
+            }
+        }
     }
     &-illstr {
         position: absolute;
@@ -22,5 +39,10 @@
         right: -120px;
         max-width: 760px;
         pointer-events: none;
+        @media (max-width: 992px) {
+            max-width: 396px;
+            right: -60px;
+            top: 260px;
+        }
     }
 }

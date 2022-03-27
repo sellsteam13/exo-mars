@@ -7,6 +7,7 @@ import { Redirect } from "~/components/Redirect/Redirect.tsx";
 import { Helmet } from "react-helmet";
 
 import textImg from "~/images/content/fourth-page/text.png";
+import textImgMobile from "~/images/content/fourth-page/text@mobile.png";
 import illstrImg from "~/images/content/fourth-page/Illstr.png";
 import item1 from '~/images/content/fourth-page/item1.png';
 import item2 from '~/images/content/fourth-page/item2.png';
@@ -42,12 +43,8 @@ const FourthPage = () => {
 
     useEffect(() => {
 
-        // Get images
-        const images = preloadCacheFrames()
-
-        // Frames
-        let scene = {frame: 60}
-        let beginScene = {frame: 1}
+        let anim2;
+        let anim3;
 
         // Horizontal scrolling
         const anim1 = gsap.to(scrollerRef.current, {
@@ -59,60 +56,82 @@ const FourthPage = () => {
                 pin: true,
                 start: "top top",
                 scrub: 1,
-                end: () => "+=" + scrollerRef.current.offsetWidth,
+                end: () => "+=" + (scrollerRef.current.offsetWidth * 2),
             },
         });
 
-        // Sequence animation
-        const anim2 = gsap.to(scene, {
-            frame: 216,
-            snap: 'frame',
-            onUpdate: render,
-            scrollTrigger: {
-                trigger: animationContainer.current,
-                invalidateOnRefresh: true,
-                start: "top top",
-                scrub: 1,
-                end: 'bottom bottom',
-            },
-        });
+        ScrollTrigger.matchMedia({
+	
+            // desktop
+            "(min-width: 993px)": function() {
 
-        // On-load animation
-        const anim3 = gsap.to(beginScene, {
-            frame: 60,
-            snap: 'frame',
-            onUpdate: renderFirst,
-            duration: 2
-        });
+                // Get images
+                const images = preloadCacheFrames()
 
-        // Preload images
-        images[scene.frame].onload = () => {
-            requestAnimationFrame(render)
-        }
-      
-        // Rendering sequence animation
-        function render() {
-            const image = images[scene.frame]
-            if (!animationRef.current || !image) {
-              return
+                // Frames
+                let scene = {frame: 60}
+                let beginScene = {frame: 1}
+                
+                    // Sequence animation
+                anim2 = gsap.to(scene, {
+                    frame: 216,
+                    snap: 'frame',
+                    onUpdate: render,
+                    scrollTrigger: {
+                        trigger: animationContainer.current,
+                        invalidateOnRefresh: true,
+                        start: "top top",
+                        scrub: 1,
+                        end: 'bottom bottom',
+                    },
+                });
+
+                console.log(typeof anim2);
+                
+
+                // On-load animation
+                anim3 = gsap.to(beginScene, {
+                    frame: 60,
+                    snap: 'frame',
+                    onUpdate: renderFirst,
+                    duration: 2
+                });
+
+                // Preload images
+                images[scene.frame].onload = () => {
+                    requestAnimationFrame(render)
+                }
+            
+                // Rendering sequence animation
+                function render() {
+                    const image = images[scene.frame]
+                    if (!animationRef.current || !image) {
+                    return
+                    }
+                    animationRef.current.style.background = `url(${image.src}) no-repeat center / cover`
+                }
+
+                // Rendering onLoad animation
+                function renderFirst() {
+                    const image = images[beginScene.frame]
+                    if (!animationRef.current || !image) {
+                    return
+                    }
+                    animationRef.current.style.background = `url(${image.src}) no-repeat center / cover`
+                }
             }
-            animationRef.current.style.background = `url(${image.src}) no-repeat center / cover`
-        }
-
-        // Rendering onLoad animation
-        function renderFirst() {
-            const image = images[beginScene.frame]
-            if (!animationRef.current || !image) {
-              return
-            }
-            animationRef.current.style.background = `url(${image.src}) no-repeat center / cover`
-        }
+          
+          });
 
         return () => {
 
             anim1.kill()
-            anim2.kill()
-            anim3.kill()
+            if (typeof anim2 == 'object') {
+                anim2.kill()
+            }
+            if (typeof anim3 == 'object') {
+                anim3.kill()
+            }
 
         }
     }, []);
@@ -183,11 +202,19 @@ const FourthPage = () => {
                             <div className={styles.animationSequenceInner} ref={animationRef}></div>
                         </div>
                     </div>
+                    <div className={styles.animationMobile}>
+                        <StaticImage
+                            placeholder={"none"}
+                            src={"../images/content/fourth-page/scene@mobile.png"}
+                            alt={"Scene"}
+                        />
+                    </div>
                 </div>
                 <div className={styles.scroller} ref={scrollerRef}>
                     <div className={styles.scrollerWrapper}>
                         <div className={styles.scrollerText}>
-                            <img src={textImg} alt="Text" />
+                            <img src={textImg} className={styles.scrollerTextImg} alt="Text" />
+                            <img src={textImgMobile} className={styles.scrollerTextImgMobile} alt="Text" />
                         </div>
                         <div className={styles.scrollerIllstr}>
                             <img src={illstrImg} alt="Illstr" />
@@ -236,7 +263,7 @@ const FourthPage = () => {
                         </div>
                     </div>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                                 ДАН не просто стал первым долго работающим
@@ -271,7 +298,7 @@ const FourthPage = () => {
                         </p>
                     </blockquote>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                                 Фактически, «нейтронно-водная революция»

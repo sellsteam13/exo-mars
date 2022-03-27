@@ -1,15 +1,16 @@
 import * as React from "react";
-import * as styles from "./styles/Index.module.scss";
 
 import { Intro } from "~/sections/index/Intro/Intro.tsx";
 import { Navigation } from "~/sections/index/Navigation/Navigation.tsx";
 import { Footer } from "~/components/Footer/Footer";
 import { Helmet } from "react-helmet";
 
+import * as styles from './styles/index.module.scss';
+
 // Index
 const Index = () => {
     return (
-        <div>
+        <div className={styles.page}>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>

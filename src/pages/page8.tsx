@@ -62,7 +62,7 @@ const EighthPage = () => {
                         </figcaption>
                     </figure>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">В итоге подповерхностный Марс остается настоящей terra incognita. Как мы уже упоминали, на Земле исследования самых сухих частей Атакамы не позволяли выявить ничего живого на глубине менее метра. Оттуда слишком легко испаряется вода — а без воды нет жизни.</p>
                             <p className="p--light">На Марсе ситуация еще острее. Близко к поверхности там слишком холодно и слишком велики скачки температур, а вот от метра и ниже ситуация может быть иной. Поэтому здесь полноценное исследование подземных очагов жизни возможно только и исключительно при помощи полноценного бурения на глубину от метра.</p>
@@ -86,7 +86,7 @@ const EighthPage = () => {
                                 alt={"Illustration"}
                             />
                         </div>
-                        <div className={cx('grid-aside', styles.pageGridAside)}>
+                        <div className={cx('grid-aside no-styles', styles.pageGridAside)}>
                             <div className="grid-aside-item">
                                 <div className="heading1 grid-aside-item__count">
                                 Розалинд Франклин
@@ -99,7 +99,7 @@ const EighthPage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="grid-content"></div>
+                        <div className="grid-content is-empty"></div>
                     </div>
                     <div className="grid">
                         <div className="grid-aside">

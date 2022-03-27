@@ -9,6 +9,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @media (max-width: 992px) {
+        padding: 24px 20px 0;
+    }
     &-link {
         margin: 0 16px;
         position: relative;
@@ -20,6 +23,15 @@
         border-radius: 50%;
         border: 2px solid #353333;
         transition: border-color $trans;
+        @media (max-width: 992px) {
+            height: 72px;
+            width: 72px;
+            flex-shrink: 0;
+            margin: 0 16px 24px;
+            >* {
+                zoom: .65;
+            }
+        }
         &:after {
             content: "";
             position: absolute;

@@ -6,20 +6,34 @@
     padding: 30px 32px 28px;
     display: flex;
     align-items: center;
+    @media (max-width: 992px) {
+        padding: 24px 16px  16px;
+        flex-direction: column;
+    }
     p {
         text-indent: 0;
     }
     &-logo {
         max-width: 200px;
         margin-right: 32px;
+        @media (max-width: 992px) {
+            max-width: 134px;
+            margin: 0 0 8px;
+        }
     }
     &-text {
         color: $lgrey;
         padding-right: 32px;
+        @media (max-width: 992px) {
+            padding: 0;
+        }
     }
     &-studio {
         margin-left: auto;
         color: $grey;
+        @media (max-width: 992px) {
+            margin: 24px 0 0;
+        }
         &-link {
             color: $white;
             text-decoration: none;

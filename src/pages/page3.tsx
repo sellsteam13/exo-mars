@@ -31,7 +31,7 @@ const ThirdPage = () => {
                         </h1>
                     </div>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p>Однако к 2000-м годам ситуация начала меняться. Американская миссия «Марс Одиссей» доставила на орбиту Марса принципиально новый и никогда до того не применявшийся в изучении чужих планет прибор HEND (High Energy Neutron Detector, детектор нейтронов высоких энергий).</p>
                         </div>
@@ -48,7 +48,7 @@ const ThirdPage = () => {
                         </figcaption>
                     </figure>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">Это довольно компактный прибор, разработанный в Институте космических исследований РАН и несущий приемник нейтронного излучения. Он регистрировал нейтроны с энергиями от 0,4 электронвольт до 15 мегаэлектронвольт. Нейтроны эти идут от поверхности Марса, и по соотношению в этом потоке нейтронов разных энергий можно понять, какие нейтроны марсианская поверхность поглощает лучше, а какие — хуже. Разные химические элементы поглощают и отражают нейтроны по разному — а значит, HEND мог выяснить состав самых верхних слоев планеты.</p>
                         </div>
@@ -73,10 +73,18 @@ const ThirdPage = () => {
                                 alt={"Схема"}
                             />
                         </div>
+                        <div className={styles.pageIllstrMobile}>
+                            <StaticImage
+                                placeholder={"none"}
+                                className="picture__img"
+                                src={"../images/content/third-page/illstr@mobile.png"}
+                                alt={"Схема"}
+                            />
+                        </div>
                         <div className={cx('heading2', styles.pageSubtitle)}>HEND совершил революцию, определив состав верхних слоев планеты.</div>
                     </div>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">Дело в том, что при столкновении с атомом водорода нейтроны теряют до половины своей энергии, то есть, найти лед или водосодержащие минералы таким прибором вполне реально — а вот альтернативные методы с такой же надежностью сделать это не могут. В итоге была составлена первая карта подповерхностной воды на Марсе.</p>
                         </div>
@@ -93,7 +101,7 @@ const ThirdPage = () => {
                         </figcaption>
                     </figure>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                             Хотя ХЕНД и сегодня — спустя двадцать лет! — успешно работает на орбите Марса, американская сторона решила, что нейтронное «окно» в гидросферу Красной планеты стоит расширить. Поэтому NASA интегрировало в свой следующий марсоход Curiosity еще более продвинутый российский прибор ДАН (Dynamic Albedo of Neutrons, динамическое альбедо нейтронов). В отличие от ХЕНД, ДАН имеет не только пассивный режим работы («прослушивание» естественного нейтронного фона), но и импульсный генератор нейтронов для активного режима поиска воды.

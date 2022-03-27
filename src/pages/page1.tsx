@@ -36,8 +36,8 @@ const FirstPage = () => {
                             на Красной планете?
                         </h1>
                     </div>
-                    <div className="grid">
-                        <div className="grid-aside">
+                    <div className={cx('grid', styles.grid)}>
+                        <div className="grid-aside grid-aside-inline">
                             <div className="grid-aside-item">
                                 <div className="heading1 grid-aside-item__count">
                                     6,7
@@ -85,8 +85,8 @@ const FirstPage = () => {
                         </div>
                     </div>
                     <div className={styles.spacer}></div>
-                    <div className="grid">
-                        <div className="grid-aside"></div>
+                    <div className={cx('grid', styles.grid)}>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                                 Из-за низкого атмосферного давления
@@ -115,7 +115,7 @@ const FirstPage = () => {
                             большую площадь.
                         </p>
                     </blockquote>
-                    <figure className="picture">
+                    <figure className={cx('picture', styles.picture)}>
                         <StaticImage
                             placeholder={"none"}
                             className="picture__img"
@@ -127,8 +127,8 @@ const FirstPage = () => {
                             космическое агентство{" "}
                         </figcaption>
                     </figure>
-                    <div className="grid">
-                        <div className="grid-aside"></div>
+                    <div className={cx('grid', styles.grid)}>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                                 При этом доставить все это на поверхность

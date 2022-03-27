@@ -31,7 +31,7 @@ const SeventhPage = () => {
                         </h1>
                     </div>
                     <div className="grid">
-                        <div className="grid-aside">
+                        <div className={cx('grid-aside grid-aside-inline', styles.firstOrder)}>
                             <div className="grid-aside-item">
                                 <div className="heading1 grid-aside-item__count">
                                     2
@@ -63,7 +63,7 @@ const SeventhPage = () => {
                     </div>
                     <div className="heading2 page__subtitle">Почему это важно? </div>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p>Некоторые американские исследователи после того, как ТГО не обнаружил метан в марсианской атмосфере, заговорили о том, что этот газ может выделяться из приповерхностных источников, и поэтому его якобы и сложно зарегистрировать с орбиты.</p>
                             <p className="p--light">Сходную позицию можно услышать и по загадочным сезонным «пикам» уровня кислорода в местной атмосфере. Временами Curiosity фиксировал его концентрацию в районе 400 частей на миллион, много выше обычной марсианской — причем это было в теплое время года.</p>
@@ -102,7 +102,7 @@ const SeventhPage = () => {
                     </div>
                     <div className="heading2 page__subtitle">После того, как планетоход отъедет от платформы, оба прибора смогут работать дополняя друг друга.</div>
                     <div className="grid">
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <StaticImage
                                     placeholder={"none"}
@@ -126,7 +126,7 @@ const SeventhPage = () => {
                     </div>
                     <div className="heading2 page__subtitle">Поэтому на борту «Казачка» есть пассивный радиометр PAT-M, весом в 0,6 килограмм. </div>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className={cx('grid-content', styles.pageCircles)}>
                             <p className="p--light">Он принимает микроволны с частотой от 6 до 20 гигагерц. По ним можно будет судить о температуре на трех уровнях глубины в местном грунте — до метра вниз. Естественно, что если в точке посадки найдут воду, где температура периодически достигает нуля градусов, перспективы местной жизни будут выглядеть совсем иначе, чем если в этом слое вечно царит -20.</p>
                             <p className="p--light">Разумеется, этим список возможностей «Казачка» не исчерпывается. У него есть набор из шести камер TSPP, комплекс SEM (1,5 килограмма), фиксирующий «марсотрясения», комплекс METEO-M (3,5 килограмма), фиксирующий давление, влажность, запыленность и падающее солнечное излучение. Магнитометр MAIGRET (1,5 килограмма), с чешским волновым анализатором WAM (Wave Analyser Module), выяснит и то, насколько сильно меняется здесь локальное магнитное поле. Этот комплекс попробует прояснит и трагическую судьбу «Марса-3» — он способен выявить электрические разряды во время пылевых бурь, один из которых мог погубить советский посадочный аппарат.</p>

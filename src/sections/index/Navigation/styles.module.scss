@@ -7,6 +7,10 @@
     z-index: 1;
     padding: 0 32px;
     margin-bottom: 120px;
+    @media (max-width: 992px) {
+        padding: 0;
+        margin-bottom: 80px;
+    }
     &-link {
         display: flex;
         justify-content: center;
@@ -14,6 +18,9 @@
         text-decoration: none;
         color: $white;
         position: relative;
+        @media (max-width: 992px) {
+            padding: 24px 16px;
+        }
         &:before, &:after {
             content: '';
             position: absolute;
@@ -60,6 +67,9 @@
             margin: 0 auto;
             display: flex;
             position: relative;
+            @media (max-width: 992px) {
+                max-width: 100%;
+            }
         }
         &-illstr {
             height: auto;
@@ -69,6 +79,9 @@
             opacity: 0;
             transition: opacity $trans, transform 1s ease;
             pointer-events: none;
+            @media (max-width: 992px) {
+                display: none;
+            }
             &-2,
             &-3,
             &-5,
@@ -111,6 +124,10 @@
             max-width: 1168px;
             position: relative;
             z-index: 3;
+            @media (max-width: 992px) {
+                font-size: rem(20);
+                line-height: lh(28,20);
+            }
             b {
                 color: $grey;
                 display: block;
@@ -138,6 +155,10 @@
             margin-right: 30px;
             font-style: italic;
             text-indent: 0;
+            @media (max-width: 992px) {
+                margin-right: 8px;
+                font-size: rem(16);
+            }
         }
     }
 }

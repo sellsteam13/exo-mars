@@ -60,7 +60,7 @@ const FifthPage = () => {
                         </p>
                     </blockquote>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">
                             Когда Роскосмос и Европейской космическое агентство готовили миссию ExoMars-2016, то ее ключевой целью поставили именно поиск следов жизни на Красной планете. Исходно миссия состояла из орбитального (Trace Gas Orbiter, TGO) и спускаемого («Скиапарелли») аппаратов, которые должны были дополнять друг друга. Однако из-за ошибок в расчетах «Скиапарелли» врезался в поверхность планеты, и ТГО оказался единственным компонентом миссии. Впрочем, не стоит драматизировать: «Скиапарелли» все равно не имел долгосрочных источников энергии, и мог проработать не более 8 суток (на аккумуляторах).
@@ -79,7 +79,7 @@ const FifthPage = () => {
                         </figcaption>
                     </figure>
                     <div className="grid">
-                        <div className="grid-aside"></div>
+                        <div className="grid-aside is-empty"></div>
                         <div className="grid-content">
                             <p className="p--light">А вот ТГО начал работать в 2016 году и продолжает делать это до сих пор. На его борту, кроме российского нейтронного детектора ФРЕНД (FREND), брата-близнеца ХЕНД, установлен Фурье-спектрометр, специально предназначенный для поиска малейших примесей в марсианской атмосфере. Несмотря на это, за годы наблюдений никаких признаков метана он не обнаружил.</p>
                             <p className="p--light">Спутник может изучать местную газовую оболочку «на просвет», анализируя спектры солнечного света, проходящего через атмосферу Марса на закате и восходе.</p>
@@ -87,7 +87,7 @@ const FifthPage = () => {
                     </div>
                     <div className="heading2 page__subtitle">То, что СПУтник не обнаружил метан означает, что в значимых количествах в атмосфере в целом этого газа здесь и не должно быть.</div>
                     <div className="grid">
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className={styles.pageMolecule}></div>
                         </div>
                         <div className="grid-content">
@@ -110,6 +110,14 @@ const FifthPage = () => {
                             placeholder={"none"}
                             className="picture__img"
                             src={"../images/content/fifth-page/illstr.png"}
+                            alt={"Иллюстраци"}
+                        />
+                    </div>
+                    <div className={cx(styles.pageIllstr, styles.pageIllstrMobile)}>
+                        <StaticImage
+                            placeholder={"none"}
+                            className="picture__img"
+                            src={"../images/content/fifth-page/illstr@mobile.png"}
                             alt={"Иллюстраци"}
                         />
                     </div>

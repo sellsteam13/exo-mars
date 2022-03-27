@@ -44,7 +44,7 @@ const FirstPage = () => {
                                 alt={"Item 1"}
                             />
                         </div>
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <div className={cx("heading1 grid-aside-item__count", styles.gridAsideTitle)}>
                                     <span>Марс 1960А</span>
@@ -72,7 +72,7 @@ const FirstPage = () => {
                                 alt={"Item 1"}
                             />
                         </div>
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <div className={cx("heading1 grid-aside-item__count", styles.gridAsideTitle)}>
                                     Марс-1
@@ -93,14 +93,14 @@ const FirstPage = () => {
                             src={"../images/content/second-page/items/3.png"}
                             alt={"Item 3"}
                         />
-                        <div className={styles.gridCount}>
+                        <div className={cx(styles.gridCount, styles.gridCountLarge)}>
                             <StaticImage
                                 placeholder={"none"}
                                 src={"../images/content/second-page/1971-1973.png"}
                                 alt={"Item 1"}
                             />
                         </div>
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <div className={cx("heading1 grid-aside-item__count", styles.gridAsideTitle)}>
                                     Марс-2
@@ -121,7 +121,7 @@ const FirstPage = () => {
                             src={"../images/content/second-page/items/4.png"}
                             alt={"Item 4"}
                         />
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <div className={cx("heading1 grid-aside-item__count", styles.gridAsideTitle)}>
                                     Марс-3
@@ -146,7 +146,7 @@ const FirstPage = () => {
                             src={"../images/content/second-page/items/5.png"}
                             alt={"Item 5"}
                         />
-                        <div className="grid-aside">
+                        <div className="grid-aside no-styles">
                             <div className="grid-aside-item">
                                 <div className={cx("heading1 grid-aside-item__count", styles.gridAsideTitle)}>
                                     Проп-м

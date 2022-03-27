@@ -13,6 +13,9 @@
         position: relative;
         background: url("data:image/svg+xml,%3Csvg width='10' height='2' viewBox='0 0 10 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H2V2H0V0Z' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E%0A")
             left top / 10px auto repeat-x;
+            @media (max-width: 992px) {
+                padding: 26px 0;
+            }
         &:hover,
         &:focus {
             .redirect-link-text b:after {
@@ -38,6 +41,10 @@
             margin: 0 auto;
             display: flex;
             position: relative;
+            @media (max-width: 992px) {
+                max-width: 100%;
+                padding: 0 48px 0 16px;
+            }
             &:after {
                 content: "";
                 position: absolute;
@@ -48,6 +55,12 @@
                 background: url("data:image/svg+xml,%3Csvg width='55' height='55' viewBox='0 0 55 55' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.0398 54.6757L16.4943 46.9541L32.4489 33.3007H0.642046L2.43182 22.6643H36.2841L23.2443 7.0166L31.0682 0.317735L54.1818 27.9825L23.0398 54.6757Z' fill='white'/%3E%3C/svg%3E%0A")
                     center center / 100% 100% no-repeat;
                 transform: translateY(-50%);
+                @media (max-width: 992px) {
+                    right: 16px;
+                    left: auto;
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
         &-text {
@@ -55,6 +68,9 @@
             max-width: 1168px;
             position: relative;
             z-index: 3;
+            @media (max-width: 992px) {
+                font-size: rem(20);
+            }
             b {
                 color: $grey;
                 display: block;
@@ -82,6 +98,9 @@
             margin-right: 30px;
             font-style: italic;
             text-indent: 0;
+            @media (max-width: 992px) {
+                margin-right: 8px;
+            }
         }
     }
 }

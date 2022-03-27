@@ -1,0 +1,10 @@
+@import "~/styles/variables";
+@import "~/styles/functions";
+
+// Fifth page styles.
+.page {
+    background: url('../../images/content/home/home-bg.png') center 134px / 1920px auto no-repeat;
+    @media (max-width: 992px) {
+        background: url('../../images/content/home/home-bg@mobile.png') calc(50% + 30px) 25px / 104vw auto no-repeat;
+    }
+}
