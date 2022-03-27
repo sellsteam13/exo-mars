@@ -85,8 +85,6 @@ const FourthPage = () => {
                         end: 'bottom bottom',
                     },
                 });
-
-                console.log(typeof anim2);
                 
 
                 // On-load animation

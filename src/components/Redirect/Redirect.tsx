@@ -12,7 +12,7 @@ import * as styles from "./Redirect.module.scss";
 export const Redirect = ({ ...rest }) => {
 
     gsap.registerPlugin(ScrollTrigger);
-    const boxRef = useRef<HTMLDivElement>();
+    const boxRef = useRef<HTMLDivElement>(null);
     const [progress, setProgress] = useState("0%");
     const [canRedirect, setCanRedirect] = useState(false);
 
@@ -22,12 +22,11 @@ export const Redirect = ({ ...rest }) => {
             trigger: boxRef.current,
             start: "bottom bottom",
             pin: true,
-            end: '+=500px',
-            // scrub: 1,
+            end: '+=1000px',
             onUpdate: (self) => {
-                let tmpProgress = (self.progress * 100) + 10;
+                let tmpProgress = (self.progress * 100) + 5;
                 setProgress(tmpProgress + "%");
-                if (tmpProgress > 105 && canRedirect) {
+                if (tmpProgress > 102 && canRedirect) {
                     navigate(rest.to)
                 }
             },

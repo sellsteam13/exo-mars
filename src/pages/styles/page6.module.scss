@@ -40,10 +40,10 @@
             &:not(.page-picture-mobile) {
                 display: none;
             }
-            &-mobile {
-                @media (min-width: 993px) {
-                    display: none;
-                }
+        }
+        &-mobile {
+            @media (min-width: 993px) {
+                display: none;
             }
         }
     }
